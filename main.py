@@ -3,9 +3,10 @@ import sys
 def check_mapping(s1:str, s2:str):
     if len(s1) != len(s2):
         print("two strings are not equal in length")
-        return False
     dict = {}
     for i in range(len(s1)):
+        if i == len(s2):
+            return True
         c1 = s1[i]
         c2 = s2[i]
         if not c1 in dict:
