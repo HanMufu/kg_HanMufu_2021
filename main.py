@@ -1,3 +1,5 @@
+import sys
+
 def check_mapping(s1:str, s2:str):
     if len(s1) != len(s2):
         print("two strings are not equal in length")
@@ -14,4 +16,6 @@ def check_mapping(s1:str, s2:str):
     return True
 
 if __name__ == "__main__":
-    print(check_mapping("aac", "a"))
+    if len(sys.argv) != 3:
+        print("exactly 2 parameters needed")
+    print(check_mapping(sys.argv[1], sys.argv[2]))
